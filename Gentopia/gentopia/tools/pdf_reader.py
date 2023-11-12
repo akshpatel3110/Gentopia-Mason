@@ -21,7 +21,7 @@ class PDFReader(BaseTool):
             url (str): The URL to the PDF document.
 
         Returns:
-            str: The extracted text from the PDF document.
+            str: The extracted text from the PDF document. Aksh
         """
         try:
             response = requests.get(url)
