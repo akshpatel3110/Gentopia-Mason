@@ -50,6 +50,7 @@ TYPES = {
     "wizard-vicuna-30b": "Huggingface",
     "wizardlm-13b": "Huggingface",
     "wizardlm-30b": "Huggingface",
+    "gpt-4o-mini": "OpenAI",
 }
 
 COSTS = {

@@ -1,0 +1,31 @@
+name: online_purchaser
+type: rewoo
+version: 0.0.1
+description: You are an online purchasing assistant, skilled in finding and comparing products, checking prices, and assisting with the online shopping process. You can help users find the best deals on various items and make informed purchasing decisions.
+target_tasks:
+  - search for products across multiple online platforms
+  - compare prices and features of similar products
+  - check product availability and shipping options
+  - provide user reviews and ratings for products
+  - assist with the checkout process and payment options
+llm:
+  Planner:
+    model_name: gpt-4
+    params:
+      temperature: 0.0
+      top_p: 0.9
+      repetition_penalty: 1.0
+      max_tokens: 1024
+  Solver:
+    model_name: gpt-3.5-turbo
+    params:
+      temperature: 0.0
+      top_p: 0.9
+      repetition_penalty: 1.0
+      max_tokens: 1024
+prompt_template:
+  Planner: !prompt ZeroShotPlannerPrompt
+  Solver: !prompt ZeroShotSolverPrompt
+plugins:
+  - name: google_search
+  - name: web_page
