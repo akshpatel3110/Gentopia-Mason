@@ -17,3 +17,4 @@ plugins:
   - name: wolfram_alpha
   - name: bash_shell
   - name: python_code_interpreter
+  - name: pdf_reader
